@@ -1,0 +1,905 @@
+@charset"UTF-8";
+    
+ header
+    {
+        float: left;
+        position: absolute;
+        right: 0px;
+        left: 0px;
+        top: 0px;
+        width: 1600px;
+        height: 150px;
+        background-color:mediumorchid;
+    }
+    
+    body
+    {
+        
+        background-color: antiquewhite;
+        min-height: inherit;
+       
+    }
+
+    .alturahome
+    {
+        min-height: 1100px;
+    }
+
+    .alturajogosgratuitospagosbody
+    {
+        height: 1000px;
+    }
+
+    .alturaPersonalizacao
+    {
+        min-height: 1200px;
+    }
+
+    .alturaMasculinoFeminino
+    {
+        min-height: 1000px;
+    }
+
+    .avataresPersonalizacao
+        {
+            width: 250px;
+            height: 280px;
+            margin-top:0px;
+            margin-left:300px;
+            padding: 20px;
+        }
+
+    .seletor
+    {
+        background-color: mediumorchid;
+        color: white;
+        border-radius: 10px;
+        height: 30px;
+        width: 200px;
+    }
+    .imgSeletor
+    {
+        margin-left: 300px;
+    }
+    
+    article
+    {
+        background-color: white;
+        color: black;
+        text-align: justify;
+        width: 900px;
+        position: absolute;
+        right: 290px;
+        left: 290px;
+        top: 300px;
+        border-radius: 20px;
+        padding: 30px;
+        min-height: inherit;
+        
+        
+    }
+
+.buscar
+    {
+          background-color: mediumorchid;
+          color: white;
+          margin-left: 10px;
+          margin-top: 0px;
+          font-size: 15px;
+          width: 70px;
+          height: 35px;
+          padding: 10px;
+          cursor: pointer;
+          outline: none;
+          border-radius: 10px;
+          box-shadow: 0 9px #999;
+    }
+        
+     .buscaInp
+    {
+        width: 200px;
+        height: 25px;
+        margin-left: 250px;
+        margin-top: 20px;
+        font-size: 15px;
+        
+    }
+
+
+    .alturaarticlepaginadecadajogo
+    {
+        min-height:850px;
+    }
+
+    .posicaotestecadajogo
+    {
+        position: absolute;
+        top: 350px;
+    }
+
+    .tamanhojogoscategorias
+    {
+        width:150px;
+        height:200px;
+    }
+
+    .classificacaoindicativa
+    {
+        width:40px;
+        height:40px;
+        border-radius:10px;
+    }
+
+    .tamanhoimagempaginadecadajogo
+    {
+        width:200px;
+        height:300px; 
+        position:absolute;
+        right:350px;
+        left:350px;
+    }
+
+    .posicaotextocadajogo
+    {
+        position:absolute;
+        top:350px;
+        margin:30px;
+    }
+
+
+    .alturabodypaginadecadajogo
+    {
+        height: 1300px;
+    }
+    
+    .alturaarticlecapaginadecadajogo
+    {
+        height: 825px;
+    }
+    
+    section
+    {
+        background-color: white;
+        color: black;
+        text-align: center;
+        width: 0px;
+        position: absolute;
+        right: 100px;
+        left: 100px;
+        top: 200px;
+        
+    }
+
+     .mostrarsenha
+     {
+            position: absolute;
+            margin-top: 20px;
+            margin-left: 270px;
+            width: 15px;
+            height: 15px;
+     }
+
+     .textomostrarsenha
+     {
+            font-size: 20px;
+            width: 250px;
+            height: 35px;
+            margin-left: 525px;
+            margin-top: 16px;
+    }
+
+    h1
+    {
+        text-align: center;
+        
+    }
+    
+    .abaixomascotes
+    {
+        margin-top: 450px;
+        padding: 10px;
+    }
+    
+    .alinhamentook
+    {
+        position:absolute;
+        margin-left:460px;
+        margin-top:-75px;
+        font-size:15px;
+    }
+    .conta
+    {
+        position: absolute;
+        right: 600px;
+        left: 600px;
+        top: 0px;
+        width: 600px;
+        font-size: 25px;
+        padding: 50px;
+        text-align: center;
+        color: white
+    }
+
+    .senhatexto
+    {
+            font-size: 25px;
+            margin-right: -120px;
+            margin-left: 300px;
+            margin-top: -25px;
+            text-align: center;
+            color: white;
+    }
+
+   .senhainput
+    {
+        width: 200px;
+        height: 25px;
+        margin-left: 550px;
+        margin-top: -26px;
+    }
+
+    .botaojogaragora
+    {
+        background-color:mediumorchid;
+        padding:5px;
+        color:white;
+        border:none;
+        width:100px;
+        height:40px;
+        position:absolute;
+        right:350px;
+        left:350px;
+    }
+
+.filterDiv {
+  float: left;
+  background-color: mediumpurple;
+  color: white;
+  width: 100px;
+  line-height: 50px;
+  text-align: center;
+  margin: 35px;
+  margin-bottom: 0px;
+  display: none;
+}
+
+.show {
+  display: inline-block;
+}
+
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: grey;
+}
+
+.btn.active {
+  background-color: pink;
+  color: white;
+}
+
+ .filtroTamanhoBody
+    {
+        min-height: 1080px;
+    }
+    
+    .logo
+    {
+        position:absolute;
+        right:0px;
+        left:0px;
+        top:0px;
+    }
+    
+    nav
+    {
+        overflow: hidden;
+        background-color:mediumvioletred;
+        border-radius: 30px;
+        text-align: center;
+        width: 500px;
+        position: absolute;
+        right: 550px; left: 550px; top: 200px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        
+  
+}
+
+    nav a
+    {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+        float: left;
+    }
+
+    nav a:hover
+    {
+        background-color:darkmagenta;
+        color: darkred;
+    }
+
+    .paginaprincipalfooterposicao
+    {
+        right: 750px;
+        left: 750px;
+        top: 1025px;
+    }
+
+     .dateSimFormInpText
+    {
+        width: 200px;
+        height: 25px;
+        margin-left: 280px;
+        margin-top: -50px;
+        
+    }
+
+   .formulariopadding
+    {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        padding: 30px;
+    }
+
+     .dateSimFormInpTextarea
+    {
+        margin-left: 280px;
+        margin-top: -50px;
+        margin-bottom: 0px;
+          
+    }
+
+    .dateSimFormArticle
+    {
+        min-height: 1150px;
+    }
+
+   .formularioDateSimBody
+    {
+        min-height: 1600px;
+    }
+
+    .formularioDateSimBody2
+    {
+        min-height:1100px;
+    }
+    
+    .cadastroFormInp
+    {
+        width: 200px;
+        height: 25px;
+        margin-left: 250px;
+        margin-top: -50px;
+        
+    }
+    
+
+    .imagemperfil
+    {
+        margin-left: -100px;
+        margin-top: 200px;
+    }
+    .perfil
+    {
+        list-style-type:none;
+        padding: 20px;
+        margin-left: 300px;
+
+    
+    }
+
+    .imagemPerfilDateSim
+    {
+        margin-top: 10px;
+        margin-bottom: 40px;
+        width:200px;
+        height:200px;
+    }
+
+    .perfilDateSim
+    {
+        padding: 20px;
+        margin-top:-170px; 
+        margin-left: 300px;
+
+    
+    }
+    .cadastroTexto
+    {
+         margin-top: 0px;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .alturaPaginasDateSim
+    {
+        min-height: 1850px;
+    }
+    .alturaBodyPaginasDateSim
+    {
+        min-height: 2300px;
+    }
+
+   .botaook
+    {
+        margin-top: 50px;
+        margin-left: 450px;
+        font-size: 20px;
+        background-color: mediumorchid;
+        color: white;
+    }
+
+
+    
+    footer
+    {
+        background-color: antiquewhite;
+        color: black;
+        font-family: French Script MT;
+        position: absolute;
+        font-size: 30px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+   
+    @media only screen and (max-width:768px)
+    {
+        article
+        {
+            background-color: white;
+            color: black;
+            text-align: center;
+            width: 1000px;
+            position: absolute;
+            right: 150px;
+            left: 150px;
+            top: 1000px;
+            border-radius: 20px;
+            font-size:50px;
+            text-align: justify;
+            padding: 20px;
+            min-height: inherit;
+            
+        }
+        .articlePersonalizacao
+        {
+            width: 900px;
+        }
+        .responPersonalizacao
+        {
+            font-size: 5000px;
+            text-align: center;
+            margin-left: 500px;
+        }
+        
+        .seletor
+        {
+            margin-top: 90px;
+            margin-left: 200px;
+            margin-bottom: 50px;
+            height: 60px;
+            font-size: 50px;
+            width: 400px;
+        }
+        
+        .optionPersonalizacao
+        {
+            height: 60px;
+            font-size: 15px;
+        }
+        
+        .imgSeletor
+        {
+            height: 600px;
+            width: 600px;
+            margin-top: 90px;
+            margin-left: 200px;
+        }
+        
+         .abaixomascotes
+        {
+            margin-top:-300px;
+            padding: 20px;
+
+        }
+        
+        section
+        {
+            background-color: white;
+            color: black;
+            text-align: center;
+            width: 0px;
+            position: absolute;
+            right: 50px;
+            left: 50px;
+            top: 1150px;
+            margin-left: 100px;
+        
+        }
+        
+
+        .logo
+        {
+
+            margin-left:400px;
+            margin-top:0px;
+        }
+        
+        .datesimform
+        {
+            padding: 30px;
+            
+           
+        }
+        .formulariopadding
+        {
+            padding: 60px;
+            text-align: center;
+        }
+        .textareapadding1
+        {
+            padding-top: 15px;
+            text-align: center;
+        }
+        .textareapadding2
+        {
+            margin-left: 10px;
+            padding-top: 10px;
+            text-align: center;
+        }
+        .dateSimFormInpText
+        {
+            width: 400px;
+            height: 50px;
+            border-color: black;
+            margin-left: 300px;
+            font-size: 40px;
+            
+        }
+        
+        .dateSimFormInpTextarea
+        {
+            border-color: black;
+            margin-left: 250px;
+            margin-top: -50px;
+             font-size: 40px;
+            width: 500px;
+            height: 400px;
+  
+            
+        }
+        
+        
+        .tamanhoimagempaginadecadajogo
+        {
+            width:400px;
+            height:600px; 
+            margin-left:-10px;
+        }
+        
+        .botaook
+        {
+            margin-top: 50px;
+            margin-left: 425px;
+            font-size: 50px;
+            background-color: mediumorchid;
+            color: white;
+            padding: 25px;
+        }
+        
+
+        
+        .avataresPersonalizacao
+        {
+            width: 350px;
+            height: 380px;
+            margin-top:-400px;
+            margin-left:400px;
+        }
+
+        .dateSimFormArticle
+        {
+            min-height: inherit;
+        }
+        .formularioDateSimBody
+        {
+            min-height: 3080px;;
+        }
+        
+         .formularioDateSimBody2
+        {
+            min-height:inherit;
+        }
+        
+        nav
+        {
+            font-size: 52px;
+            display: block;
+            width: 100%;
+            margin-left: -20px;
+            margin-top:410px;
+            width: 400px;
+            text-align: center;
+            border-radius: 5px;
+            
+            
+        }
+        .conta
+        {
+            background-color:mediumorchid;
+            margin-left:-200px;
+            margin-top: 180px;
+            color: black;
+            width: 550px;
+            font-size: 50px;
+            text-align: center;
+            height: 350px;
+            padding: 30px;
+            color: white;
+            border-radius: 20px;
+        }
+        
+        .alinhamentook
+        {
+            position:absolute;
+            margin-left:-20px;
+            margin-top:25px;
+            font-size:30px;
+        }
+        
+        .mostrarsenha
+        {
+            margin-top: 70px;
+            margin-left: -350px;
+            width: 30px;
+            height: 30px;
+        }
+        
+        
+        .textomostrarsenha
+        {
+            font-size: 45px;
+            width: 300px;
+            height: 35px;
+            margin-left: 160px;
+            margin-top: 10px;
+        }
+        
+        .alturasenha
+        {
+            position: absolute;
+            top: 15px;
+        }
+        
+        .logininput
+        {
+            width: 400px;
+            height: 50px;
+            margin-left: 10px;
+            margin-top: 10px;
+             font-size: 40px;
+
+        }
+        .senhainput
+        {
+            width: 400px;
+            height: 50px;
+            margin-left: 10px;
+            margin-top: 0px;
+            border-color: black;
+            font-size: 40px;
+        }
+        
+        .senhatexto
+        {
+            font-size: 50px;
+            margin-right: 250px;
+            margin-left: 225px;
+            margin-top: 20px;
+            text-align: center;
+            color: white;
+            
+        }
+        
+        .alturahome
+    {
+        min-height: 3100px;
+    }
+        
+     .alturaArticlehome
+    {
+        min-height: 1900px;
+    }
+        
+        
+    .filterDiv 
+    {
+        
+        margin-right:380px;
+        margin-left: 300px;
+
+    }
+        
+    .btn
+    {
+        height: 200px;
+        width: 450px;
+        font-size: 40px;
+        margin-right: 50px;
+        margin-left: 300px;
+    }
+        
+    .filtroTamanhoBody
+    {
+        min-height: 7800px;
+    }
+        
+    .tamanhoarticlejogosgratuitospagos
+    {
+        
+            height: 4000px;
+            width: 800px;
+    }
+        
+        
+     .posicaotextocadajogo
+     {
+        position:absolute;
+        top:550px;
+        margin:30px;
+     }
+        
+    .classificacaoindicativa
+    {
+        width:120px;
+        height:120px;
+        border-radius:20px;
+    }    
+        
+      .botaojogaragora
+      {
+        background-color:mediumorchid;
+        padding:5px;
+        color:white;
+        border:none;
+        width:350px;
+        height:85px;
+        position:absolute;
+        margin-left:-50px;
+        font-size: 55px;
+      }
+        
+        
+     .tamanhojogoscategorias
+     {
+        width:450px;
+        height:600px;
+     }
+           .abaixomascotes
+        {
+            position:absolute; 
+            top:1900px;
+        }
+        
+        .alturabodypaginaprincipal
+        {
+            height: 3300px;
+        }
+       .alturaarticlepaginaprincipal
+        {
+         height: 2250px;
+        }
+
+      .alturabodypaginadecadajogo
+        {
+            height: 3950px;
+        }
+        
+    .alturaarticlepaginadecadajogo
+        {
+            min-height:2750px;
+        }
+        
+        
+    .imagemPerfilDateSim
+    {
+
+        margin-left: 200px;
+        width: 600px;
+        height: 600px;
+    }
+
+    .perfilDateSim
+    {
+        padding: 20px;
+        margin-top:0px; 
+        margin-left: 180px;
+        font-size: 50px;
+
+    
+    }
+        
+    .cadastroFormInp
+    {
+        width: 400px;
+        height: 50px;
+        margin-left: 250px;
+        margin-top: -70px;
+        border-color: grey;
+        font-size: 40px;
+        
+    }
+        
+        
+    .alturaPaginasDateSim
+    {
+        min-height: 7500px;
+    }
+        
+    .alturaBodyPaginasDateSim
+    {
+        min-height: 8800px;
+    }
+    .buscar
+    {
+          background-color: mediumorchid;
+          color: white;
+          margin-left: 700px;
+          margin-top: -55px;
+          font-size: 40px;
+          width: 180px;
+          height: 80px;
+          padding: 10px;
+          cursor: pointer;
+          outline: none;
+          border-radius: 15px;
+          box-shadow: 0 9px #999;
+    }
+        
+     .buscaInp
+    {
+        width: 400px;
+        height: 50px;
+        margin-left: 250px;
+        margin-top: 0px;
+        border-color: grey;
+        font-size: 40px;
+        
+    }
+
+
+        
+         footer
+        {
+             margin-top: 100px;
+             margin-left: -10px;
+             bottom: 0;
+             width: 100%;
+             text-align: center;
+             font-size: 70px;
+        }
+        
+       
+    }

@@ -1,0 +1,175 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="estilootomegame.css">
+<meta charset="utf-8">
+<title> Amor&amp;Emoção</title>
+    
+<script>
+    
+    function exibesenha()
+    {
+        var senha=document.getElementById("senhausuario");
+        if(senha.type==="password")
+        {
+            senha.type="text";
+        }
+        else
+        {
+            senha.type="password";
+        }
+    }
+    
+        function checaLogin()
+    {
+        let emailUsuario=document.getElementById("emailDigitado").value;
+        let senhadigitada=document.getElementById("senhausuario").value;
+        let textoalerta="";
+         let dadosUsuarioAtual = JSON.parse(localStorage.getItem(emailUsuario));
+		
+         if(localStorage.getItem(emailUsuario)!=null);
+          {
+              if(dadosUsuarioAtual.senha==senhadigitada)
+                
+                {
+                    console.log(senhadigitada);
+                     console.log(emailUsuario);
+                   alert("Seja bem vindo(a)!");
+                }
+   
+              else
+                {
+                    alert("Login ou senha incorretos");
+                }
+
+          }
+       
+
+        
+    }
+    
+    
+    filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+    function executaFiltroGeneros()
+    {
+         var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+        });
+    }
+   
+}
+    
+</script>
+
+    
+</head>
+<body onload="executaFiltroGeneros()" class="filtroTamanhoBody">
+    <header>
+    
+        <a href="otomegame.html"><img src="amoreemo%C3%A7%C3%A3ologositenovo.png" alt="logo" width="600px" height="150px" class="logo"></a>
+        
+        
+    
+    </header>
+    
+   <form class="conta" onsubmit="checaLogin()return:false;">
+                    
+             E-mail:<input type="email" name="nomeusuario" class="logininput" id="emailDigitado">
+            <div class="senhatexto">Senha:</div> <input type="password" name="senha" id="senhausuario" class="senhainput"><input type="checkbox" onclick="exibesenha()" class="mostrarsenha"><div class="textomostrarsenha">Mostrar Senha</div>
+             <input type="submit" value="OK" class="alinhamentook" onclick="checaLogin()">
+        
+        
+        
+     </form>
+    
+    
+    
+    <nav>
+        
+            <a href="cadastro.html">Criar Conta</a>
+            <a href="jogosgratuitos.html">Jogos Gratuitos</a>
+            <a href="jogospagos.html">Jogos Pagos</a>
+             <a href="amigos.html">Amigos</a>
+    
+ 
+    
+    </nav>
+    
+    
+    <article>
+                
+            <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Tudo</button>
+            <button class="btn" onclick="filterSelection('romance')"> Romance</button>
+            <button class="btn" onclick="filterSelection('fantasia/sobrenatural')"> Fantasia/Sobrenatural</button>
+            <button class="btn" onclick="filterSelection('suspense/terror')"> Suspense/Terror</button>
+            </div>
+
+<div class="container">
+  <div class="filterDiv romance"> <a href="seabrir.html" ><img src="desenho-facil-amor-cora%C3%A7%C3%A3o-fechado.jpg" alt="pessoasmudamlogo" class="tamanhojogoscategorias"></a></div>
+  <div class="filterDiv romance"> <a href="confian%C3%A7aprofissional.html"><img src="otomegame1.jpg" alt="Confiança Profissional" class="tamanhojogoscategorias"> </a>  </div>
+  <div class="filterDiv romance"> <a href="biologiaouquimica.html"><img src="romancehistoria3.png" alt="Biologia Ou Quimica" class="tamanhojogoscategorias"></a>   </div>
+  <div class="filterDiv fantasia/sobrenatural"> <a href="aultimachance.html"><img src="fantasia2.jpg" alt="A Última Chance" class="tamanhojogoscategorias"></a>   </div>
+  <div class="filterDiv fantasia/sobrenatural">  <a href="Rosadesangue.html"><img src="vampiros1.jpg" alt="Rosa de Sangue" class="tamanhojogoscategorias"></a>  </div>
+  <div class="filterDiv suspense/terror"> <a href="medomaterializado.html"><img src="horrorsuspense3.jpg" alt="Medo Materializado" class="tamanhojogoscategorias"></a>  </div>
+  <div class="filterDiv suspense/terror"> <a href="corvoceifador.html"> <img src="horrorsuspense4.jpg" alt="Corvo Ceifafor" class="tamanhojogoscategorias"></a>  </div>
+  <div class="filterDiv suspense/terror"> <a href="emmeioaescuridao.html"><img src="vampiros5.jpg" alt="Em Meio A Escuridão" class="tamanhojogoscategorias"></a> </div>
+  <div class="filterDiv fantasia/sobrenatural"> <a href="espiritosagrado.html"><img src="fantasia8.jpg" alt="Espírito Sagrado" class="tamanhojogoscategorias"></a>   </div>
+</div>
+        
+
+    
+            
+    
+    
+    
+    </article>
+    
+<footer>&copy;A&amp;E<br> E-mail de contato:luisa.c.correia@edu.unirio.br</footer>
+    
+ 
+    
+    
+    
+    
+</body>
+    
+    
+    
+</html>

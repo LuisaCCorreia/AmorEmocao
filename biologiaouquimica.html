@@ -1,0 +1,129 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="estilootomegame.css">
+<meta charset="utf-8">
+<title> Amor&amp;Emoção</title>
+    
+<script>
+    
+    function exibesenha()
+    {
+        var senha=document.getElementById("senhausuario");
+        if(senha.type==="password")
+        {
+            senha.type="text";
+        }
+        else
+        {
+            senha.type="password";
+        }
+    }
+    
+        function checaLogin()
+    {
+        let emailUsuario=document.getElementById("emailDigitado").value;
+        let senhadigitada=document.getElementById("senhausuario").value;
+        let textoalerta="";
+         let dadosUsuarioAtual = JSON.parse(localStorage.getItem(emailUsuario));
+		
+         if(localStorage.getItem(emailUsuario)!=null);
+          {
+              if(dadosUsuarioAtual.senha==senhadigitada)
+                
+                {
+                    console.log(senhadigitada);
+                     console.log(emailUsuario);
+                   alert("Seja bem vindo(a)!");
+                }
+   
+              else
+                {
+                    alert("Login e senha incorretos");
+                }
+
+          }
+       
+
+        
+    }
+    
+
+
+</script>
+
+    
+</head>
+<body class="alturaBodyPaginasDateSim">
+    <header>
+    
+        <a href="otomegame.html"><img src="amoreemo%C3%A7%C3%A3ologositenovo.png" alt="logo" width="600px" height="150px" class="logo"></a>
+        
+        
+    
+    </header>
+    
+       <form class="conta" onsubmit="checaLogin()return:false;">
+                    
+             E-mail:<input type="email" name="nomeusuario" class="logininput" id="emailDigitado">
+            <div class="senhatexto">Senha:</div> <input type="password" name="senha" id="senhausuario" class="senhainput"><input type="checkbox" onclick="exibesenha()" class="mostrarsenha"><div class="textomostrarsenha">Mostrar Senha</div>
+             <input type="submit" value="OK" class="alinhamentook" onclick="checaLogin()">
+        
+        
+        
+     </form>
+    
+    
+    
+    <nav>
+        
+            <a href="cadastro.html">Criar Conta</a>
+            <a href="jogosgratuitos.html">Jogos Gratuitos</a>
+            <a href="jogospagos.html">Jogos Pagos</a>
+             <a href="amigos.html">Amigos</a>
+    
+ 
+    
+    </nav>
+    
+    
+    <article class="alturaPaginasDateSim">
+        
+       
+        
+         <img src="romancehistoria3.png" alt="Biologia ou Química" class="tamanhoimagempaginadecadajogo">
+        
+        <div class="posicaotextocadajogo">
+             <h2> Sinopse:</h2><p>Você foi convidado(a) a participar de uma pesquisa de espécies raras e para isso, tem que se mudar para uma cidade da qual nunca ouviu falar. Lá, você encontrará uma equipe de cientistas: Ethan, um farmacêutico; Glória, uma zoóloga; Kevin, um biologo; Flora, uma botânica. Dentre esses quatro, você deverá escolher um(a) parceiro(a) para trabalharem juntos. Quem irá escolher?   </p>
+            <h2>Mais detalhes: </h2><p> Nesse jogo as escolhas feitas pelo jogador(a) importam, é do tipo datesim, possui imagens de cenas importantes, é possível escolher se o protagonista e o interesse amoroso serão um personagem feminino ou masculino. </p>
+            <h2>Personagens:</h2>
+            <img src="bot%C3%A2nica.png" alt="Flora"  class="imagemPerfilDateSim"><p class="perfilDateSim">Nome: Flora<br>Características: Séria e na defensiva, gosta muito da sua profissão apesar de pouco valorizada. Contudo, quanto mais íntima de alguém pode ser muito gentil.<br> Gosta de : Plantas e chá.<br>Não gosta de : Pessoas ignorantes.</p>
+             <img src="biologo.png" alt="Kevin" width="200px" height="200px" class="imagemPerfilDateSim"><p class="perfilDateSim">Nome: Kevin<br>Características: Meio metido, mas divertido. Queria ser médico,porém foi impossibilitado por causa de uma lesão<br> Gosta de : Aventura e da natureza.<br>Não gosta de : Doces.</p>
+             <img src="zo%C3%B3loga.png" alt="Glória" width="200px" height="200px" class="imagemPerfilDateSim"><p class="perfilDateSim">Nome: Glória<br>Características:Antissocial, nunca teve amigos e não confia em pessoas. <br> Gosta de :Estudar e ficar com animais.<br>Não gosta de : Gente.</p>
+            <img src="farmac%C3%AAutico.png" alt="Ethan" width="200px" height="200px" class="imagemPerfilDateSim"><p class="perfilDateSim">Nome: Ethan<br>Características:Gentil e simpático, sempre dosposto a ajudar. <br> Gosta de : Ler.<br>Não gosta de : trabalhos mal feitos.</p>
+            <h2> Classificação Indicativa:</h2><img src="14anos.png" alt="14 anos" class="classificacaoindicativa">
+            <h2>Preço:</h2><p>R$0,00</p>
+            
+          <a href="personalizacaoAvatares.html"> <button class="botaojogaragora">Jogar Agora</button></a> 
+        
+        </div>
+        
+        
+       
+           
+    
+    </article>
+    
+    <footer>&copy;A&amp;E <br> E-mail de contato:luisa.c.correia@edu.unirio.br</footer>
+    
+ 
+    
+    
+    
+    
+</body>
+    
+    
+    
+</html>

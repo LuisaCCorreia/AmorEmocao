@@ -1,0 +1,149 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="estilootomegame.css">
+<meta charset="utf-8">
+<title> Teste Diagramação</title>
+    
+<script>
+    
+    function exibesenha()
+    {
+        var senha=document.getElementById("senhausuario");
+        if(senha.type==="password")
+        {
+            senha.type="text";
+        }
+        else
+        {
+            senha.type="password";
+        }
+    }
+    
+    filterSelection("todos")
+    
+    filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+    
+     function executaFiltroGeneros()
+    {
+         var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+        });
+    }
+}
+    
+</script>
+
+    
+</head>
+<body onload="executaFiltroGeneros()" class="filtroTamanhoBody">
+    <header>
+    
+        <img src="amoreemo%C3%A7%C3%A3ologositenovo.png" alt="logo" width="600px" height="150px" class="logo">
+        
+        
+    
+    </header>
+    
+     <form class="conta">
+                    
+             Nome de usuário:<input type="email" name="nomeusuario" class="logininput">
+            <div class="senhatexto">Senha:</div> <input type="password" name="senha" id="senhausuario" class="senhainput"><input type="checkbox" onclick="exibesenha()" class="mostrarsenha"><div class="textomostrarsenha">Mostrar Senha</div>
+             <input type="submit" value="OK" class="alinhamentook">
+        
+        
+        
+     </form>
+    
+    
+    
+    <nav>
+        
+            <a href="cadastro.html">Criar Conta</a>
+            <a href="jogosgratuitos.html">Jogos Gratuitos</a>
+            <a href="jogospagos.html">Jogos Pagos</a>
+             <a href="amigos.html">Amigos</a>
+    
+ 
+    
+    </nav>
+    
+    
+    <article>
+                
+            <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Tudo</button>
+            <button class="btn" onclick="filterSelection('romance')"> Romance</button>
+            <button class="btn" onclick="filterSelection('fantasia/sobrenatural')"> Fantasia/Sobrenatural</button>
+            <button class="btn" onclick="filterSelection('suspense/terror')"> Suspense/Terror</button>
+            </div>
+
+<div class="container">
+  <div class="filterDiv romance"> <a href="avidaimitaraaarte.html"><img src="otomegame5.jpg" alt="A Vida Imitará a Arte" class="tamanhojogoscategorias"></a>    </div>
+  <div class="filterDiv romance"> <a href="dezAnos.html"><img src="otomegame8.jpg" alt="Dez anos" class="tamanhojogoscategorias"></a>  </div>
+  <div class="filterDiv romance"> <a href="parImprovavel.html"><img src="otomegame6.jpg" alt="Par Improvável" class="tamanhojogoscategorias"></a>  </div>
+  <div class="filterDiv fantasia/sobrenatural"><a href="aLaminaFriaeQuente.html"><img src="fantasia3.jpg" alt="A Lâmina Fria e Quente" class="tamanhojogoscategorias"> </a> </div>
+  <div class="filterDiv fantasia/sobrenatural"> <a href="magiaFeudal.html"><img src="fantasia5.jpg" alt="Magia Feudal" class="tamanhojogoscategorias"></a>  </div>
+  <div class="filterDiv fantasia/sobrenatural"> <a href="fomeInsaci%C3%A1vel.html"><img src="vampiros4.jpg" alt="Fome Insaciável" class="tamanhojogoscategorias"></a> </div>
+  <div class="filterDiv suspense/terror"> <a href="vozMorta.html"><img src="horrorsuspense2.jpg" alt="Voz Morta" class="tamanhojogoscategorias"> </a> </div>
+  <div class="filterDiv suspense/terror"> <a href="oSerdasSombras.html"><img src="horrorsuspense.jpg" alt="O Ser das Sombras" class="tamanhojogoscategorias"></a> </div>
+  <div class="filterDiv suspense/terror"> <a href="dor.html"><img src="horrorsuspense5.jpg" alt="Dor" class="tamanhojogoscategorias"></a>  </div>
+</div>
+        
+
+    
+            
+    
+    
+    
+    </article>
+    
+    <footer>&copy;A&amp;E <br> E-mail de contato:luisa.c.correia@edu.unirio.br</footer>
+    
+ 
+    
+    
+    
+    
+</body>
+    
+    
+    
+</html>

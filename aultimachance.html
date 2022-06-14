@@ -1,0 +1,123 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="estilootomegame.css">
+<meta charset="utf-8">
+<title> Amor&amp;Emoção</title>
+    
+<script>
+    
+    function exibesenha()
+    {
+        var senha=document.getElementById("senhausuario");
+        if(senha.type==="password")
+        {
+            senha.type="text";
+        }
+        else
+        {
+            senha.type="password";
+        }
+    }
+    
+        function checaLogin()
+    {
+        let emailUsuario=document.getElementById("emailDigitado").value;
+        let senhadigitada=document.getElementById("senhausuario").value;
+        let textoalerta="";
+         let dadosUsuarioAtual = JSON.parse(localStorage.getItem(emailUsuario));
+		
+         if(localStorage.getItem(emailUsuario)!=null);
+          {
+              if(dadosUsuarioAtual.senha==senhadigitada)
+                
+                {
+                    console.log(senhadigitada);
+                     console.log(emailUsuario);
+                   alert("Seja bem vindo(a)!");
+                }
+   
+              else
+                {
+                    alert("Login e senha incorretos");
+                }
+
+          }
+       
+
+        
+    }
+    
+
+
+</script>
+
+    
+</head>
+<body class="alturabodypaginadecadajogo">
+    <header>
+    
+        <a href="otomegame.html"><img src="amoreemo%C3%A7%C3%A3ologositenovo.png" alt="logo" width="600px" height="150px" class="logo"></a>
+        
+        
+    
+    </header>
+       <form class="conta" onsubmit="checaLogin()return:false;">
+                    
+             E-mail:<input type="email" name="nomeusuario" class="logininput" id="emailDigitado">
+            <div class="senhatexto">Senha:</div> <input type="password" name="senha" id="senhausuario" class="senhainput"><input type="checkbox" onclick="exibesenha()" class="mostrarsenha"><div class="textomostrarsenha">Mostrar Senha</div>
+             <input type="submit" value="OK" class="alinhamentook" onclick="checaLogin()">
+        
+        
+        
+     </form>
+    
+    
+    
+    <nav>
+        
+            <a href="cadastro.html">Criar Conta</a>
+            <a href="jogosgratuitos.html">Jogos Gratuitos</a>
+            <a href="jogospagos.html">Jogos Pagos</a>
+             <a href="amigos.html">Amigos</a>
+    
+ 
+    
+    </nav>
+    
+    
+    <article class="alturaarticlepaginadecadajogo">
+        
+       
+        
+         <img src="fantasia2.jpg" alt="Confiança Profissional" class="tamanhoimagempaginadecadajogo">
+        
+        <div class="posicaotextocadajogo">
+             <h2> Sinopse:</h2><p>Os elfos estão em uma guerra civil que completará 100 anos de duração. Você, um elfo comum, ouve uma conversa de um grupo suspeito e descobre que o principal estopim para a guerra foi planejado para que eles conseguissem tomar algumas pedras mágicas em meio ao caos. Então, você decide se unir a sua amiga de infância para roubar o que esse grupo tanto quer e conversar com os principais líderes,  senão a guerra acabará destruindo a todos.</p>
+            <h2>Mais detalhes: </h2><p> Nesse jogo as escolhas feitas pelo jogador(a) importam, não é do tipo datesim, possui imagens de cenas importantes, é possível escolher se o protagonista e o interesse amoroso serão um personagem feminino ou masculino. </p>
+            <h2> Classificação Indicativa:</h2><img src="14anos.png" alt="14 anos" class="classificacaoindicativa">
+            <h2>Preço:</h2><p>R$0,00</p>
+            
+           <a href="masculino.html"><button class="botaojogaragora">Jogar Agora</button></a> 
+        
+        </div>
+        
+        
+       
+           
+    
+    </article>
+    
+    <footer>&copy;A&amp;E<br> E-mail de contato:luisa.c.correia@edu.unirio.br</footer>
+    
+ 
+    
+    
+    
+    
+</body>
+    
+    
+    
+</html>

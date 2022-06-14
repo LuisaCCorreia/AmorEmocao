@@ -1,0 +1,244 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="estilootomegame.css">
+<meta charset="utf-8">
+<title> Amor&amp;Emoção</title>
+    
+<script>
+    
+ function exibesenha()
+    {
+        var senha=document.getElementById("senhausuario");
+        if(senha.type==="password")
+        {
+            senha.type="text";
+        }
+        else
+        {
+            senha.type="password";
+        }
+    }
+    
+        function checaLogin()
+    {
+        let emailUsuario=document.getElementById("emailDigitado").value;
+        let senhadigitada=document.getElementById("senhausuario").value;
+        let textoalerta="";
+         let dadosUsuarioAtual = JSON.parse(localStorage.getItem(emailUsuario));
+		
+         if(localStorage.getItem(emailUsuario)!=null);
+          {
+              if(dadosUsuarioAtual.senha==senhadigitada)
+                
+                {
+                    console.log(senhadigitada);
+                     console.log(emailUsuario);
+                   alert("Seja bem vindo(a)!");
+                }
+   
+              else
+                {
+                    alert("Login e senha incorretos");
+                }
+
+          }
+       
+
+        
+    }
+    
+     function cadastrarUsuario(){
+                let emailusuario = document.getElementById("email").value;
+                let nome =  document.getElementById("nome").value;
+                let senhausuario =document.getElementById("senha").value;
+         
+        let indicesponto=[];
+        let antesarroba;
+        let dpsarroba;
+        let indicearroba;
+        let indiceponto;
+        let contarroba=0;
+        let contponto=0;
+        let primpontoconteudo;
+        let segpontoconteudo;
+        let contletramaiuscula=0;
+        let contnumero=0;
+       
+        let i;
+        
+        let tamanho=emailusuario.length;
+        
+        for(i=0;i<tamanho;i++)
+        {
+            if(emailusuario[i]=="@")
+            {
+                contarroba++;
+                indicearroba=i;
+            }
+            if(emailusuario[i]==".")
+            {
+                contponto++;
+            }
+            
+            if(emailusuario[i]==" ")
+            {
+                alert("Por favor, digite um e-mail válido");
+                return;
+            }
+        }
+        
+        antesarroba=emailusuario.slice(0,indicearroba);
+        dpsarroba=emailusuario.slice(indicearroba+1,tamanho);
+        
+        if((contarroba!=1)||(antesarroba.length<1)||(dpsarroba.length<3)||(contponto<1))
+            
+        {
+            alert("Por favor, digite um e-mail válido");
+            return;
+        }
+
+
+
+                for(i=0;i<dpsarroba.length;i++)
+                {
+                    if(dpsarroba[i]==".")
+                    {
+                        indicesponto.push(i);
+                    }
+                    
+                }
+
+        
+            primpontoconteudo=dpsarroba.slice(0,indicesponto[0]);
+        
+            segpontoconteudo=dpsarroba.slice(indicesponto[1],tamanho);
+            
+        
+            if((primpontoconteudo.length<1)||(segpontoconteudo.length<1))
+                
+            {
+               alert("Por favor, digite um e-mail válido"); 
+               return;
+            }
+
+
+        if(senhausuario.length<8)
+        {
+             alert("Sua senha deve ter 8 ou mais caracteres"); 
+             return;
+        }
+
+        
+        for(i=0;i<senhausuario.length;i++)
+        {
+             if((senhausuario.charCodeAt(i)>=48)&&(senhausuario.charCodeAt(i)<=57))
+            {
+               contnumero++;
+            }
+            
+            else
+            {
+                    if(senhausuario[i]==senhausuario[i].toUpperCase()) 
+                    {
+                        contletramaiuscula++;
+                    }
+            }
+
+        }
+        
+        if(contletramaiuscula<1)
+        {
+            alert("Sua senha deve conter pelo menos 1 letra maiúscula");
+            return;
+        }
+
+            
+        if(contnumero<1)
+        {
+            alert("Sua senha deve conter pelo menos 1 número"); 
+            return;
+        }
+
+
+              let dados = {
+                    email: emailusuario,
+                    nome:nome,
+                    senha: senhausuario
+                }
+                localStorage.setItem(emailusuario, JSON.stringify(dados));
+        }
+           
+         
+            
+
+                  
+            
+     
+
+
+</script>
+
+    
+</head>
+<body class="alturabodypaginaprincipal">
+    <header>
+    
+      <a href="otomegame.html"><img src="amoreemo%C3%A7%C3%A3ologositenovo.png" alt="logo" width="600px" height="150px" class="logo"></a>  
+        
+        
+    
+    </header>
+    <form class="conta" onsubmit="checaLogin()"return:false;>
+                    
+             E-mail:<input type="email" name="nomeusuario" class="logininput" id="emailDigitado">
+            <div class="senhatexto">Senha:</div> <input type="password" name="senha" id="senhausuario" class="senhainput"><input type="checkbox" onclick="exibesenha()" class="mostrarsenha"><div class="textomostrarsenha">Mostrar Senha</div>
+             <input type="submit" value="OK" class="alinhamentook" onclick="checaLogin()">
+        
+        
+        
+     </form>
+
+    <nav>
+        
+            <a href="cadastro.html">Criar Conta</a>
+            <a href="jogosgratuitos.html">Jogos Gratuitos</a>
+            <a href="jogospagos.html">Jogos Pagos</a>
+             <a href="amigos.html">Amigos</a>
+    
+ 
+    
+    </nav>
+    
+    
+    <article>
+        
+        <p>Preencha os dados para poder jogar e fazer amigos aqui em Amor &amp;Emoção!A senha deve ter no mínimo 8 caracteres e deve ter no mínimo 1 leltra maiúscula.</p>
+        <form name="cadastro">
+            <div class="cadastroTexto"> E-mail: </div><input type="email"  id="email" class="cadastroFormInp">
+            <div class="cadastroTexto">  Nome: </div> <input type="text" id="nome" class="cadastroFormInp">
+            <div class="cadastroTexto">Senha: </div> <input type="password" id="senha" class="cadastroFormInp">
+            
+           <a href="relat%C3%B3rio.html"><input type="button" onclick=" cadastrarUsuario()" value="OK" class="botaook"> </a> 
+        </form>
+       
+    
+            
+    
+    
+    
+    </article>
+    
+<footer>&copy;A&amp;E<br> E-mail de contato:luisa.c.correia@edu.unirio.br</footer>
+    
+ 
+    
+    
+    
+    
+</body>
+    
+    
+    
+</html>

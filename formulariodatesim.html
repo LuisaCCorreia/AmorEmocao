@@ -1,0 +1,108 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="estilootomegame.css">
+<meta charset="utf-8">
+<title> Teste Diagramação</title>
+<script>
+    
+     function exibesenha()
+    {
+        var senha=document.getElementById("senhausuario");
+        if(senha.type==="password")
+        {
+            senha.type="text";
+        }
+        else
+        {
+            senha.type="password";
+        }
+    }
+    function numeroProtocoloPedido()
+    {
+         let protocoloPedido = Math.floor((Math.random() * 999999) + 1);
+        
+        alert("O seu pedido foi enviado com sucesso! O número do protocolo é:" + protocoloPedido );
+    }
+    
+    
+</script>
+
+    
+</head>
+<body class="formularioDateSimBody">
+    <header>
+    
+        <a href="otomegame.html"><img src="amoreemo%C3%A7%C3%A3ologositenovo.png" alt="logo" width="600px" height="150px" class="logo"></a>
+        
+        
+    
+    </header>
+    
+       <form class="conta" onsubmit="checaLogin()return:false;">
+                    
+             E-mail:<input type="email" name="nomeusuario" class="logininput" id="emailDigitado">
+            <div class="senhatexto">Senha:</div> <input type="password" name="senha" id="senhausuario" class="senhainput"><input type="checkbox" onclick="exibesenha()" class="mostrarsenha"><div class="textomostrarsenha">Mostrar Senha</div>
+             <input type="submit" value="OK" class="alinhamentook" onclick="checaLogin()">
+        
+        
+        
+     </form>
+    
+    <nav>
+        
+            <a href="cadastro.html">Criar Conta</a>
+            <a href="jogosgratuitos.html">Jogos Gratuitos</a>
+            <a href="jogospagos.html">Jogos Pagos</a>
+             <a href="amigos.html">Amigos</a>
+    
+ 
+    
+    </nav>
+    
+    
+    <article class="dateSimFormArticle">
+        
+        
+        
+        <form class="datesimform">
+            
+            <div class="formulariopadding">Autor(a) da história: </div><input type="text" id="autores" class="dateSimFormInpText"><br>
+            
+            <div class="formulariopadding">E-mail de contato: </div><input type="text" id="autores" class="dateSimFormInpText"><br>
+            
+            <div class="formulariopadding">Empresa que ajudou a desenvolver: </div><input type="text" id="empresa" class="datesimforminptext"><br>
+            
+            <div class="formulariopadding">Sinopse: </div><textarea name="message" rows="15" cols="50" class="datesimforminptextarea"></textarea><br>
+            
+            <div class="formulariopadding"> Personagens:</div> <textarea name="message" rows="15" cols="50" class="datesimforminptextarea" ></textarea><br>
+            
+            <div class="formulariopadding">Rotas possíveis: </div><textarea name="message" rows="15" cols="50" class="dateSimFormInpTextarea"></textarea><br>
+            
+            <input class="botaook" type="submit" value="OK" onclick="numeroProtocoloPedido()">
+            
+            
+             
+           
+
+        </form>
+    
+            
+    
+    
+    
+    </article>
+    
+    <footer>&copy;A&amp;E</footer>
+    
+ 
+    
+    
+    
+    
+</body>
+    
+    
+    
+</html>

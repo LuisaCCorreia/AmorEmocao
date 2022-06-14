@@ -1,0 +1,190 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="estilootomegame.css">
+
+<meta charset="utf-8">
+<title> Amor&amp;Emoção</title>
+    
+<script>
+    
+    function exibesenha()
+    {
+        var senha=document.getElementById("senhausuario");
+        if(senha.type==="password")
+        {
+            senha.type="text";
+        }
+        else
+        {
+            senha.type="password";
+        }
+    }
+    
+    
+        function checaLogin()
+    {
+        let emailUsuario=document.getElementById("emailDigitado").value;
+        let senhadigitada=document.getElementById("senhausuario").value;
+        let textoalerta="";
+         let dadosUsuarioAtual = JSON.parse(localStorage.getItem(emailUsuario));
+		
+         if(localStorage.getItem(emailUsuario)!=null);
+          {
+              if(dadosUsuarioAtual.senha==senhadigitada)
+                
+                {
+                    console.log(senhadigitada);
+                     console.log(emailUsuario);
+                   alert("Seja bem vindo(a)!");
+                }
+   
+              else
+                {
+                    alert("Login e senha incorretos");
+                }
+
+          }
+       
+
+        
+    }
+    
+    function checaLogin()
+    {
+        let emailUsuario=document.getElementById("emailDigitado").value;
+        let senhadigitada=document.getElementById("senhausuario").value;
+        let textoalerta="";
+         let dadosUsuarioAtual = JSON.parse(localStorage.getItem(emailUsuario));
+		
+         if(localStorage.getItem(emailUsuario)!=null);
+          {
+              if(dadosUsuarioAtual.senha==senhadigitada)
+                
+                {
+                    console.log(senhadigitada);
+                     console.log(emailUsuario);
+                   alert("Seja bem vindo(a)!");
+                }
+   
+              else
+                {
+                    alert("Login e senha incorretos");
+                }
+
+          }
+       
+
+        
+    }
+
+    
+    function Personalização() 
+    {
+        var imagem;
+        switch (document.getElementById("roupas").value) 
+        {
+            case "moletom":
+            imagem ="curtopretosmoreno.jpg" ;
+            break;
+            case "estampada":
+                imagem = "Blusa%20Estampada.jpg";
+                break;
+                
+            case "mangacomprida":
+                imagem = "Blusa%20Manga%20Comprida.jpg";
+                
+                break;
+            case "polo":
+                imagem = "Blusa%20Polo.jpg";
+                break;
+            case "folgada":
+                imagem ="Roupa%20Folgada.jpg" ;
+                break;
+                
+    
+            
+        }
+        
+        document.getElementById("Roupas").src=imagem;
+        
+    }
+    
+    function numeroProtocoloPedido()
+    {
+         let protocoloPedido = Math.floor((Math.random() * 999999) + 1);
+        
+        alert("O seu pedido foi enviado com sucesso! O número do protocolo é:" + protocoloPedido );
+    }
+    
+    
+    
+</script>
+
+    
+</head>
+<body class="alturaMasculinoFeminino">
+    <header>
+    
+        <a href="otomegame.html"><img src="amoreemo%C3%A7%C3%A3ologositenovo.png" alt="logo" width="600px" height="150px" class="logo"></a>
+        
+        
+    
+    </header>
+    
+     <form class="conta" onsubmit="checaLogin()return:false;">
+                    
+             E-mail:<input type="email" name="nomeusuario" class="logininput" id="emailDigitado">
+            <div class="senhatexto">Senha:</div> <input type="password" name="senha" id="senhausuario" class="senhainput"><input type="checkbox" onclick="exibesenha()" class="mostrarsenha"><div class="textomostrarsenha">Mostrar Senha</div>
+             <input type="submit" value="OK" class="alinhamentook" onclick="checaLogin()">
+        
+        
+        
+     </form>
+    
+
+    <nav>
+        
+            <a href="cadastro.html">Criar Conta</a>
+            <a href="jogosgratuitos.html">Jogos Gratuitos</a>
+            <a href="jogospagos.html">Jogos Pagos</a>
+            <a href="amigos.html">Amigos</a>
+    
+ 
+    
+    </nav>
+    
+    
+    <article>
+        
+                
+                <h2> Escolha roupa do seu avatar: </h2>
+                <select class="seletor" id="roupas" onChange="Personalização()" style="position:absolute;top:100px;">
+            <option class="optionPersonalizacao" value="moletom">Moletom </option>
+            <option class="optionPersonalizacao" value="estampada">Blusa Estampada </option>
+            <option class="optionPersonalizacao" value="mangacomprida">Blusa de Manga Comprida</option>
+            <option class="optionPersonalizacao" value="polo">Blusa polo</option>
+            <option class="optionPersonalizacao" value="folgada">Roupa Folgada</option>
+    </select>
+                <img src="curtopretosmoreno.jpg" alt="Curtopretosmoreno" height="400px" width="400px" id="Roupas" class="imgSeletor">
+                
+                <button class="botaook" onclick="numeroProtocoloPedido()">OK</button>
+        
+        
+    
+    </article>
+    
+    
+<footer>&copy;A&amp;E<br> E-mail de contato:luisa.c.correia@edu.unirio.br</footer>
+    
+ 
+    
+    
+    
+    
+</body>
+    
+    
+    
+</html>

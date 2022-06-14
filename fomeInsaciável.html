@@ -1,0 +1,129 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="estilootomegame.css">
+<meta charset="utf-8">
+<title> Amor&amp;Emoção</title>
+    
+<script>
+    
+    function exibesenha()
+    {
+        var senha=document.getElementById("senhausuario");
+        if(senha.type==="password")
+        {
+            senha.type="text";
+        }
+        else
+        {
+            senha.type="password";
+        }
+    }
+    
+    
+        function checaLogin()
+    {
+        let emailUsuario=document.getElementById("emailDigitado").value;
+        let senhadigitada=document.getElementById("senhausuario").value;
+        let textoalerta="";
+         let dadosUsuarioAtual = JSON.parse(localStorage.getItem(emailUsuario));
+		
+         if(localStorage.getItem(emailUsuario)!=null);
+          {
+              if(dadosUsuarioAtual.senha==senhadigitada)
+                
+                {
+                    console.log(senhadigitada);
+                     console.log(emailUsuario);
+                   alert("Seja bem vindo(a)!");
+                }
+   
+              else
+                {
+                    alert("Login e senha incorretos");
+                }
+
+          }
+       
+
+        
+    }
+
+
+</script>
+
+    
+</head>
+<body class="alturaBodyPaginasDateSim">
+    <header>
+    
+        <a href="otomegame.html"><img src="amoreemo%C3%A7%C3%A3ologositenovo.png" alt="logo" width="600px" height="150px" class="logo"></a>
+        
+        
+    
+    </header>
+    
+      <form class="conta" onsubmit="checaLogin()return:false;">
+                    
+             E-mail:<input type="email" name="nomeusuario" class="logininput" id="emailDigitado">
+            <div class="senhatexto">Senha:</div> <input type="password" name="senha" id="senhausuario" class="senhainput"><input type="checkbox" onclick="exibesenha()" class="mostrarsenha"><div class="textomostrarsenha">Mostrar Senha</div>
+             <input type="submit" value="OK" class="alinhamentook" onclick="checaLogin()">
+        
+        
+        
+     </form>
+    
+    
+    
+    <nav>
+        
+            <a href="cadastro.html">Criar Conta</a>
+            <a href="jogosgratuitos.html">Jogos Gratuitos</a>
+            <a href="jogospagos.html">Jogos Pagos</a>
+             <a href="amigos.html">Amigos</a>
+    
+ 
+    
+    </nav>
+    
+    
+    <article class="alturaPaginasDateSim">
+        
+       
+        
+         <img src="vampiros4.jpg" alt="Fome Insáciavel" class="tamanhoimagempaginadecadajogo">
+        
+        <div class="posicaotextocadajogo">
+             <h2> Sinopse:</h2><p>Você foi para uma noitada na noite anterior e não lembra de nada do que aconteceu. Apesar de não estar com dor de cabeça ou qualquer outro sintoma comum na ressaca, você sente uma fome muito grande. Então, tenta seguir a vida normalmente, mas por algum motivo toda a comida que você ingere te satisfaz. Ao andar na rua você passa por um açougue e seu corpo deseja por aquilo, o que é estranho porque você é vegetariana há 5 anos. Confusa, continua andando, porém você se sente fraca demais e desmaia. Ao acordar, está em um lugar desconhecido com 4 garotos e eles te dizem que está no período de transição para vampira e oferecem ajuda até que o processo se conclua.</p>
+            <h2>Personagens: </h2>
+             <img src="Avatar5.png" alt="Davi"  class="imagemPerfilDateSim"><p class="perfilDateSim">Nome: Davi<br>Características: Inteligente e sério.<br> Gosta de : Novatos.<br>Não gosta de : Filmes sobrenaturais</p>
+             <img src="Avatar6.png" alt="Heitor" class="imagemPerfilDateSim"><p class="perfilDateSim">Nome: Heitor<br>Características: Era um nerd antes de ser transformado e não conseguiu abandonar o velho estilo<br> Gosta de : Computadores e Matemática.<br>Não gosta de : Geografia.</p>
+             <img src="Avatar7.png" alt="Henrique" class="imagemPerfilDateSim"><p class="perfilDateSim">Nome: Henrinque<br>Características:Atlético e divertido. <br> Gosta de :esportes e festas.<br>Não gosta de : Gente estraga prazer.</p>
+            <img src="Avatar8.png" alt="Bruno" class="imagemPerfilDateSim"><p class="perfilDateSim">Nome: Ethan<br>Características:Seu amigo de infância, foi transformado no messmo dia que você <br> Gosta de : Artes Marciais.<br>Não gosta de : Pessoas metidas.</p>
+            <h2>Mais detalhes: </h2><p> Nesse jogo as escolhas feitas pelo jogador(a) importam, é do tipo datesim, possui imagens de cenas importantes e há seleção de rota. </p>
+            <h2> Classificação Indicativa:</h2><img src="14anos.png" alt="14 anos" class="classificacaoindicativa">
+            <h2>Preço:</h2><p>R$3,99</p>
+            
+           <a href="feminino.html"><button class="botaojogaragora">Jogar Agora</button></a> 
+        
+        </div>
+        
+        
+       
+           
+    
+    </article>
+    
+<footer>&copy;A&amp;E<br> E-mail de contato:luisa.c.correia@edu.unirio.br</footer>
+    
+ 
+    
+    
+    
+    
+</body>
+    
+    
+    
+</html>
